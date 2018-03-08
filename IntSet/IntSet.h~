@@ -1,0 +1,41 @@
+// Name: Jon Hays
+// Pengo acct: jhays
+// Email: mightyfancy@gmail.com
+// Filename: IntSet.h
+// Assignment #3 (Integer Sets)
+// Purpose: Header file for integer set class
+// Code Status: working/tested
+
+#ifndef INTSET__H
+#define INTSET__H
+
+// CS19: C++ Integer Sets Program
+// Starter Code by Steve J. Hodges
+// The IntSet class renders integer set objects that are comprised 
+// of distinct elements; this class' member functions include 
+// implementation of standard set operations like intersectionOf,
+// unionOf, equals, etc. Sets can be initialized with between 
+// 0 to 5 elements, and elements can fall in the range of 0 
+// to MAXSETVAL (default==1000).  
+class IntSet{
+ public:
+  IntSet(int =-1,int =-1, int =-1, int =-1, int =-1);
+  void insertElement(int);
+  void deleteElement(int);
+  std::string toString() const;
+  void unionOf(IntSet &, IntSet &);
+  void intersectionOf(IntSet &, IntSet &);
+  bool equals(IntSet) const;
+  bool hasElement(int) const;
+  int static getMax(){ return MAXSETVAL; } // Returns maximum integer set value.
+  void test();
+ private:
+  static const int MAXSETVAL=1000;
+  bool data[MAXSETVAL+1];
+};
+
+
+#endif
+
+
+

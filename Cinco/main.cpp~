@@ -1,0 +1,12 @@
+#include <cstdlib>
+#include "Dictionary.h"
+#include "Cinco.h"
+
+int main(int argc, char **argv){
+  srand(time(0));
+  Cinco *c = new Cinco();
+  if (argc == 2)  
+    c->setQuickGuess(true); 
+  c->play();
+  return 0;
+}
