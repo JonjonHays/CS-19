@@ -11,6 +11,6 @@ Dictionary.o: Dictionary.cpp Dictionary.h
 	g++ -c Dictionary.cpp
 
 clean: 
-	rm -f p4 *.o *-
+	rm -f p4 *.o *~
 
 

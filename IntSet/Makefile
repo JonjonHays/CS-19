@@ -8,4 +8,4 @@ IntSet.o: IntSet.cpp IntSet.h
 	g++ -c IntSet.cpp
 
 clean: 
-	rm -f p3 *.o*
+	rm -f p3 *.o *~
